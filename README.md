@@ -11,7 +11,7 @@
 
 (just looks like the default macOS prompt)
 
-![](/Users/yuyu/Desktop/macOS-singularisart-prompt/images/0.png)
+![](./images/0.png)
 
 ## Installation
 
@@ -40,16 +40,16 @@ Visible here are:
     - Red dot indicates unstaged changes.
     - Blue dot indicates untracked files.
 
-![](/Users/yuyu/Desktop/macOS-singularisart-prompt/images/3.png)
+![](./images/3.png)
 
 If the last command exited with a non-zero status (usually indicative of an
 error), a red exclamation is shown:
 
-![](/Users/yuyu/Desktop/macOS-singularisart-prompt/images/1.png)
+![](./images/1.png)
 
 If there are background processes, a yellow asterisk is shown:
 
-![](/Users/yuyu/Desktop/macOS-singularisart-prompt/images/2.png)
+![](./images/2.png)
 
 # Credit
 
