@@ -53,4 +53,4 @@ If there are background processes, a yellow asterisk is shown:
 
 # Credit
 
-This zsh prompt is inspired by [SingularisArt]([GitHub - zap-zsh/singularisart-prompt: Custom Prompt.](https://github.com/zap-zsh/singularisart-prompt)), and I tweaked it according to my own liking and the default macOS prompt.
+This zsh prompt is inspired by [SingularisArt](https://github.com/zap-zsh/singularisart-prompt)'s prompt, and I tweaked it according to my own liking and the default macOS prompt.
