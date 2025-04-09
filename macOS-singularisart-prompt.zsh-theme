@@ -120,7 +120,28 @@ function +vi-git-untracked() {
   fi
 }
 
+# https://gist.github.com/chisui/0d12bd51a5fd8e6bb52e6e6a43d31d5e#file-agnoster-nix-zsh-theme
+function prompt_nix_shell() {
+  if [[ -n "$IN_NIX_SHELL" ]]; then
+    if [[ -n $NIX_SHELL_PACKAGES ]]; then
+      local package_names=""
+      local packages=($NIX_SHELL_PACKAGES)
+      for package in $packages; do
+        package_names+=" ${package##*.}"
+      done
+      echo -n "{$package_names } "
+    elif [[ -n $name ]]; then
+      local cleanName=${name#interactive-}
+      cleanName=${cleanName#lorri-keep-env-hack-}
+      cleanName=${cleanName%-environment}
+      echo -n "{ $cleanName } "
+    else # This case is only reached if the nix-shell plugin isn't installed or failed in some way
+      echo -n "nix-shell {} "
+    fi
+  fi
+}
+
 setopt PROMPT_SUBST
-PROMPT="%n@%m %1~%F{yellow}%(1j.*.)%f%F{red}%(?..!)%f "
+PROMPT="$(prompt_nix_shell)%n@%m %1~%F{yellow}%(1j.*.)%f%F{red}%(?..!)%f "
 PROMPT+="\$vcs_info_msg_0_"
 PROMPT+="%{$reset_color%}%% "
